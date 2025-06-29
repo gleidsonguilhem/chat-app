@@ -100,7 +100,7 @@ Enable password authentication with --requirepass
 Avoid exposing Redis publicly to prevent unauthorized access and attacks.
 
 
-# Commands to run your project
+# Commands to run this project
 
 ```bash
 git clone https://github.com/gleidsonguilhem/chat-app.git
