@@ -39,8 +39,9 @@ A simple real-time chat application built with:
 ```bash
 git clone https://github.com/gleidsonguilhem/chat-app.git
 cd chat-app
-2. Backend Setup (server/)
 ```
+
+2. Backend Setup (server/)
 
 📦 Install Dependencies
 
