@@ -34,24 +34,27 @@ chat-app/
 ```bash
 npm run dev
 Runs client & server simultaneously.
+```
 
 In server folder:
-bash
-Copy
-Edit
+
+```bash
 npm install         # install backend dependencies
 npm run dev         # run backend dev server with hot reload
+```
+
 In client folder:
-bash
-Copy
-Edit
+
+```bash
 npm install         # install frontend dependencies
 npm start           # run React dev server
+```
+
 Common Scripts Examples
+
 Root package.json
-json
-Copy
-Edit
+
+```json
 "scripts": {
   "dev": "concurrently \"npm run dev --prefix server\" \"npm start --prefix client\""
 }
