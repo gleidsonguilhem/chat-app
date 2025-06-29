@@ -58,18 +58,20 @@ Root package.json
 "scripts": {
   "dev": "concurrently \"npm run dev --prefix server\" \"npm start --prefix client\""
 }
+```
+
 Server package.json (JavaScript example)
-json
-Copy
-Edit
+
+```json
 "scripts": {
   "dev": "nodemon src/index.js",
   "start": "node src/index.js"
 }
+```
+
 Client package.json
-json
-Copy
-Edit
+
+```json
 "scripts": {
   "start": "react-scripts start",
   "build": "react-scripts build"
