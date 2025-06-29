@@ -99,20 +99,8 @@ Enable password authentication with --requirepass
 
 Avoid exposing Redis publicly to prevent unauthorized access and attacks.
 
-## Helpful Resources
 
-npm scripts docs
-concurrently package
-nodemon
-react-scripts
-
-# Redis security best practices
-
-Feel free to keep this file updated as your project evolves!
-Want me to generate example package.json files or Docker setup next?
-Would you like me to create actual example files for you too?
-
-## Commands to run your project
+# Commands to run your project
 
 ```bash
 git clone https://github.com/gleidsonguilhem/chat-app.git
@@ -163,3 +151,16 @@ Stop Redis container (when not using the app)
 docker stop redis-secure
 docker rm redis-secure
 ```
+
+# Redis security best practices
+
+Feel free to keep this file updated as your project evolves!
+Want me to generate example package.json files or Docker setup next?
+Would you like me to create actual example files for you too?
+
+## Helpful Resources
+
+npm scripts docs
+concurrently package
+nodemon
+react-scripts
