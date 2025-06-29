@@ -113,3 +113,56 @@ Feel free to keep this file updated as your project evolves!
 Want me to generate example package.json files or Docker setup next?
 
 Would you like me to create actual example files for you too?
+
+
+
+
+🚀 Commands to run your project
+1. Clone the repo
+bash
+Copy
+Edit
+git clone https://github.com/gleidsonguilhem/chat-app.git
+cd chat-app
+2. Run Redis with password locally (Docker)
+bash
+Copy
+Edit
+docker run -d --name redis-secure -p 127.0.0.1:6379:6379 redis redis-server --requirepass 'My$trongPass123'
+Make sure the password here matches the one in your backend code.
+
+3. Install dependencies
+bash
+Copy
+Edit
+# Install root dependencies (for concurrently)
+npm install
+
+# Install backend dependencies
+cd server
+npm install
+cd ..
+
+# Install frontend dependencies
+cd client
+npm install
+cd ..
+4. Start backend and frontend simultaneously
+From the project root folder:
+
+bash
+Copy
+Edit
+npm run dev
+This runs:
+
+Backend on http://localhost:5000
+
+Frontend on http://localhost:3000
+
+🔑 Bonus: How to stop Redis container
+bash
+Copy
+Edit
+docker stop redis-secure
+docker rm redis-secure
