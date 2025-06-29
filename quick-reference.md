@@ -101,40 +101,35 @@ Avoid exposing Redis publicly to prevent unauthorized access and attacks.
 
 ## Helpful Resources
 
-# npm scripts docs
-# concurrently package
-# nodemon
-# react-scripts
+npm scripts docs
+concurrently package
+nodemon
+react-scripts
 
 # Redis security best practices
 
 Feel free to keep this file updated as your project evolves!
-
 Want me to generate example package.json files or Docker setup next?
-
 Would you like me to create actual example files for you too?
 
+## Commands to run your project
 
-
-
-🚀 Commands to run your project
-1. Clone the repo
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/gleidsonguilhem/chat-app.git
 cd chat-app
+```
+
 2. Run Redis with password locally (Docker)
-bash
-Copy
-Edit
+
+```bash
 docker run -d --name redis-secure -p 127.0.0.1:6379:6379 redis redis-server --requirepass 'My$trongPass123'
+```
+
 Make sure the password here matches the one in your backend code.
 
 3. Install dependencies
-bash
-Copy
-Edit
+
+```bash
 # Install root dependencies (for concurrently)
 npm install
 
@@ -147,22 +142,24 @@ cd ..
 cd client
 npm install
 cd ..
+```
+
 4. Start backend and frontend simultaneously
+
 From the project root folder:
 
-bash
-Copy
-Edit
+```bash
 npm run dev
+```
+
 This runs:
 
 Backend on http://localhost:5000
-
 Frontend on http://localhost:3000
 
-🔑 Bonus: How to stop Redis container
-bash
-Copy
-Edit
+Stop Redis container (when not using the app)
+
+```bash
 docker stop redis-secure
 docker rm redis-secure
+```
