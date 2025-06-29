@@ -1,0 +1,8 @@
+services:
+  redis:
+    image: redis:7
+    container_name: redis-secure
+    ports:
+      - "127.0.0.1:6379:6379"  # accessible only from localhost
+    command: ["redis-server", "--requirepass", "My$trongPass123"]
+    restart: unless-stopped
