@@ -1,81 +1,114 @@
 # real-time-chat
 
-Real-Time Chat App
+A simple real-time chat application featuring:
 
-A simple real-time chat application using:
+- **Frontend:** React + TypeScript  
+- **Backend:** Node.js + Express + Socket.IO  
+- **Database:** Redis (for message storage and pub/sub)
 
-    React + TypeScript (frontend)
+---
 
-    Node.js + Express + Socket.IO (backend)
+## 📸 Preview
 
-    Redis (message storage)
+Real-time messaging between connected clients with Redis-backed message history.
 
-📸 Preview
+---
 
-    Real-time messaging between connected clients with Redis-backed message history.
-
-📁 Project Structure
+## 📁 Project Structure
 
 .
-├── client/       # React frontend
-├── server/       # Node.js backend with Socket.IO and Redis
+├── client/ # React frontend
+├── server/ # Node.js backend with Socket.IO and Redis
 └── README.md
 
-🚀 Getting Started
-1. Clone the Repository
+yaml
+Copy
+Edit
 
-git clone https://github.com/your-username/realtime-chat-app.git
-cd realtime-chat-app
+---
 
-🛠 Backend Setup (server/)
-📦 Install Dependencies
+## 🚀 Getting Started
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/gleidsonguilhem/chat-app.git
+cd chat-app
+2. Backend Setup (server/)
+Install Dependencies
+bash
+Copy
+Edit
 cd server
 npm install
+Run Redis Securely with Docker
+bash
+Copy
+Edit
+docker run -d \
+  --name redis-secure \
+  -p 127.0.0.1:6379:6379 \
+  redis redis-server --requirepass "My$trongPass123"
+Redis is bound to localhost only to prevent external access.
 
-🧠 Run Redis
+Password authentication is enabled with --requirepass.
 
-Make sure Redis is running locally. You can use Docker:
-
-docker run -p 6379:6379 redis
-
-▶ Start Server
-
+Start Server
+bash
+Copy
+Edit
 npx ts-node-dev src/index.ts
+Backend runs at: http://localhost:3001
 
-The backend runs on http://localhost:3001.
-💻 Frontend Setup (client/)
-📦 Install Dependencies
-
-cd client
+3. Frontend Setup (client/)
+Install Dependencies
+bash
+Copy
+Edit
+cd ../client
 npm install
-
-▶ Start React App
-
+Start React App
+bash
+Copy
+Edit
 npm start
+Frontend runs at: http://localhost:3000
 
-The frontend runs on http://localhost:3000.
 🔌 Features
+Real-time messaging with Socket.IO
 
-    Real-time messaging using Socket.IO
+Persistent message history using Redis
 
-    Persistent message history using Redis
+Fully typed with TypeScript
 
-    Fully typed with TypeScript
+Modern React UI
 
-    Modern UI with React
+📚 Why This Setup?
+Initially, exposing Redis with -p 6379:6379 without authentication caused unauthorized access attempts.
 
-📦 Tech Stack
-Layer	Tech
-Frontend	React, TypeScript
-Backend	Node.js, Express, Socket.IO
-Database	Redis
+Best practices implemented:
+
+Bind Redis to 127.0.0.1 only (local machine access)
+
+Enable Redis password authentication
+
+Avoid exposing internal services publicly
+
 🧪 Optional Improvements
+Add Authentication (JWT/OAuth)
 
-    Authentication with JWT or OAuth
+Use Redis Pub/Sub to scale with multiple instances
 
-    Redis Pub/Sub for scaling with multiple instances
+Integrate a database for user/message persistence
 
-    Database integration for user/message persistence
+UI enhancements with Tailwind CSS or Material UI
 
-    UI enhancements with Tailwind or Material UI
+Build securely, code confidently! 🚀
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you want me to add a Docker Compose example or any other section!
